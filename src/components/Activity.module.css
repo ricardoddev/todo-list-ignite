@@ -1,0 +1,108 @@
+.activityDone {
+  padding: 1rem;
+
+  background: var(--gray-500);
+
+  border: 1px solid var(--gray-400);
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.06);
+
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  align-self: stretch;
+}
+
+.activityNotDone {
+  padding: 1rem;
+
+  background: var(--gray-500);
+
+  border: 1px solid var(--gray-500);
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.06);
+
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  align-self: stretch;
+}
+
+.activityDone + .activityDone {
+  margin-top: 0.75rem;
+}
+
+.activityDone + .activityNotDone {
+  margin-top: 0.75rem;
+}
+
+.activityNotDone + .activityNotDone {
+  margin-top: 0.75rem;
+}
+
+.activityNotDone + .activityDone {
+  margin-top: 0.75rem;
+}
+
+.activityNotDone p {
+  width: 100%;
+  color: var(--gray-100);
+  line-height: 1.4;
+  font-size: 0.875rem;
+  word-break: normal;
+}
+
+.activityDone p {
+  width: 100%;
+  color: var(--gray-300);
+  text-decoration: line-through;
+  line-height: 1.4;
+  font-size: 0.875rem;
+}
+
+.activityNotDone span {
+  height: 1.25rem;
+  width: 1.25rem;
+  margin-top: 0.25rem;
+
+  background-image: url('../assets/NotChecked.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+
+  transition: background .1s ease;
+}
+
+.activityNotDone span:hover {
+  background-image: url('../assets/NotCheckedHover.svg');
+}
+
+.activityDone span {
+  height: 1.25rem;
+  width: 1.25rem;
+  margin-top: 0.25rem;
+
+  background-image: url('../assets/Checked.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+
+  transition: background .1s ease;
+}
+
+.activityDone span:hover {
+  background-image: url('../assets/CheckedHover.svg');
+}
+
+.trash {
+  padding: 0.3125rem;
+}
+
+.trash:hover {
+  border-radius: 4px;
+  background: var(--Gray-400, #333);
+  
+  cursor: pointer;
+  color: var(--red);
+
+}
